@@ -1,0 +1,23 @@
+{
+  "name": "joi-func",
+  "version": "1.0.0",
+  "description": "Functions calls validated by Joi schemas.",
+  "main": "./lib/index",
+  "dependencies": {
+    "joi": "^6.4.1",
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "gulp-mocha": "^2.0.1",
+    "should": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nukisman/joi-func.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Alexander Nuikin",
+    "email": "nukisman@gmail.com"
+  }
+}

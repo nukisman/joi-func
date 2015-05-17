@@ -1,14 +1,8 @@
-# joi-func
-
-# Install
-
-`npm install joi-func --save`
-
-# Usage example
-
-```
+/**
+ * Created by Alexander Nuikin (nukisman@gmail.com) on 17.05.15.
+ */
 var Joi = require('joi')
-var JoiFunc = require('joi-func')
+var JoiFunc = require('./lib/') // require('joi-func')
 var assert = require('assert')
 
 var schema = Joi.func()
@@ -49,4 +43,3 @@ var obj = {
 }
 assert(obj.method(2, 'abc'))
 assert(obj.method(10, 'abc') == false)
-```

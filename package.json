@@ -1,7 +1,7 @@
 {
   "name": "joi-func",
-  "version": "1.0.0",
-  "description": "Functions calls validated by Joi schemas.",
+  "version": "1.0.1",
+  "description": "Function call validated by Joi.",
   "main": "./lib/index",
   "dependencies": {
     "joi": "^6.4.1",

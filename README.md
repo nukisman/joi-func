@@ -6,7 +6,7 @@
 
 # Usage example
 
-```
+```js
 var Joi = require('joi')
 var JoiFunc = require('joi-func')
 var assert = require('assert')

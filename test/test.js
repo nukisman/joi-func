@@ -6,16 +6,14 @@ var Joi = require('joi')
 var JoiFunc = require('../lib/')
 var should = require('should')
 
-var schema = Joi.func()
-    .meta({
-        args: [ // array of argument schemas, not alternative shorthand
-            Joi.number().required(),
-            Joi.string().optional()
-        ],
-        return: Joi.bool().optional()
-    })
-
-//console.log('schema:', schema)
+var meta = {
+    args: [
+        Joi.number().required(),
+        Joi.string().optional()
+    ],
+    return: Joi.bool().optional()
+}
+var schema = Joi.func().meta(meta)
 
 var shouldError = function (message) {
     return function (err) {
@@ -26,8 +24,14 @@ var shouldError = function (message) {
     }
 }
 
-it('Ok', function () {
+it('Schema', function () {
     JoiFunc(schema, function (n, s) {
+        return s.length > n
+    })(10, 'abc')
+})
+
+it('Meta', function () {
+    JoiFunc(meta, function (n, s) {
         return s.length > n
     })(10, 'abc')
 })

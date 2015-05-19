@@ -7,6 +7,10 @@
 # Usage example
 
 ```javascript
+var Joi = require('joi')
+var JoiFunc = require('joi-func')
+var assert = require('assert')
+
 // Function call metadata
 var meta = {
     args: [ // Array of argument schemas (optional)
